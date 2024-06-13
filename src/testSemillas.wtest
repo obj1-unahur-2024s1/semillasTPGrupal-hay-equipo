@@ -1,32 +1,32 @@
 import semillas.*
 
 describe "tests de semillas"{
-	const menta1 = new Menta(altura = 1, anioDeSemilla = 2007)
-	const menta2 = new Menta(altura = 0.3, anioDeSemilla = 2007)
-	const soja1 = new Soja(altura = 0.6, anioDeSemilla = 2009)
-	const quinoa1 = new Quinoa(horasDeSol = 12, altura = 0.5, anioDeSemilla = 2010)
-	const quinoa2 = new Quinoa(horasDeSol = 9, altura = 0.5, anioDeSemilla = 2001)
+	const menta1 = new Menta(altura = 1, anioDeObtencion = 2007)
+	const menta2 = new Menta(altura = 0.3, anioDeObtencion = 2007)
+	const soja1 = new Soja(altura = 0.6, anioDeObtencion = 2009)
+	const quinoa1 = new Quinoa(horasDeSolQueTolera = 12, altura = 0.5, anioDeObtencion = 2010)
+	const quinoa2 = new Quinoa(horasDeSolQueTolera = 9, altura = 0.5, anioDeObtencion = 2001)
 	
 	test "menta1 da semillas"{
 		assert.equals(true, menta1.daSemillas())
 	}
 	test "menta1 ocupa 3 m2"{
-		assert.equals(3, menta1.cuantoEspacioOcupa())
+		assert.equals(3, menta1.espacioQueOcupa())
 	}
 	test "menta2 no da semillas"{
 		assert.equals(false, menta2.daSemillas())
 	}
 	test "menta2 ocupa 0.9 m2"{
-		assert.equals(0.9, menta2.cuantoEspacioOcupa())
+		assert.equals(0.9, menta2.espacioQueOcupa())
 	}
 	test "soja1 tiene una tolerancia al sol de 7 horas"{
-		assert.equals(7, soja1.horasDeSol())
+		assert.equals(7, soja1.horasDeSolQueTolera())
 	}
 	test "soja1 no da semillas"{
 		assert.equals(false, soja1.daSemillas())
 	}
 	test "soja1 ocupa 0.3 m2"{
-		assert.equals(0.3, soja1.cuantoEspacioOcupa())
+		assert.equals(0.3, soja1.espacioQueOcupa())
 	}
 	test "quinoa1 da semillas"{
 		assert.equals(true, quinoa1.daSemillas())
